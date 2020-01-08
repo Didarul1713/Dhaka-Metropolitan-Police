@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="Database.css">
+    <link rel="stylesheet" href="Bootstrap.css">
+    <!--<link rel="stylesheet" href="button1.html">-->
+    <link rel="stylesheet" href="shake.css">
+    <script src="javascript1.js"></script>
+    <script src="javascript2.js"></script>
+    <script src="javascript3.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #02a89e;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <img src="DMP LOGO.png" class="shake" style="width:50px ;margin-right:10px;">
+        <!--important means overlapping on other things-->
+        <a class="navbar-brand" href="DMP LOGO.png" ; style="font-family:Oswald" ;font-size: 25px">Dhaka Metropolitan Police</a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
+
+        </div>
+
+    </nav>
+    <h2 align="center" style="font-family: Oswald ;margin-top:70px">Branch Database Form</h2>
+
+    <div>
+        <form action="index.php" method="post">
+            <label for="bname">Branch Name</label>
+            <input type="text" id="bname" name="bname" required placeholder="Your New Branch name...">
+
+            <label for="barea">Branch Area</label>
+            <select id="barea" name="barea">
+                <option required value="">Select Area...</option>
+                <option value="Mohammadpur">Mohammadpur</option>
+                <option value="Adabor">Adabor</option>
+                <option value="Bashundhora">Bashundhora</option>
+                <option value="Tejgaon">Tejgaon</option>
+                <option value="Mohakhali">Mohakhali</option>
+                <option value="Uttora">Uttora</option>
+                <option value="Add New Area">Add New Area</option>
+            </select>
+
+            <label for="mobile">Mobile No.</label>
+            <input type="text" id="mobile" name="mobile" required placeholder="Your New Branch Contact...">
+
+            <label for="iname">Incharge Name.</label>
+            <input type="text" id="iname" name="iname" required placeholder="Your Branch Incharge Name...">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>

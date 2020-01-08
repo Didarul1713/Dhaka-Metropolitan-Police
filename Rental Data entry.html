@@ -1,0 +1,175 @@
+<?php include('partials/db_connect.php'); ?>
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css\Bootstrap.css">
+    <link rel="stylesheet" href="css\Footer.css">
+    <link rel="stylesheet" href="css\shake.css">
+    <link rel="stylesheet" href="css\Dropdown.css">
+    <script src="js\javascript1.js"></script>
+    <script src="js\javascript2.js"></script>
+    <script src="js\javascript3.js"></script>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+
+	<title> <b>Rental Data Information</b></title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+    </style>
+</head>
+<body>
+	<div class="container" style="margin-top :30px">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                        <div class="panel-heading" style="text-align:center ;font-family: 'Times New Roman' , Times, serif;font-weight: bold; line-height=10px; font-size:40px;  ">Room Information</div>  
+                    <div class="panel-body">
+                        <form action="rental Data submit.php" method="POST">
+                            <div class="row">
+                                <div class="col-md-12" >
+                                <div class="form-group">
+                                        <label for="roomType">Room Type: <span style="color: red">*</span></label>
+                                        <select name="roomType" class="form-control" id="roomType" required>
+                                            <option value="">Select Room...</option>
+                                            <option value="Mohammadpur">Single Room</option>
+                                            <option value="Adabor">Double Room</option>
+                                            <option value="Bashundhora">Flat</option>
+                                            <option value="Tejgaon">Roommate</option>  
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="houseRent">House Rent: <span style="color: red">*</span></label>
+                                        <input type="houseRent" name="houseRent" class="form-control" id="houseRent" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address">Address: <span style="color: red">*</span></label>
+                                        <input type="address" name="address" class="form-control" id="address" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="ownerName">Owner Name: <span style="color: red">*</span></label>
+                                        <input type="ownerName" name="ownerName" class="form-control" id="ownerName" required>
+                                    </div>
+    
+                                    <div class="form-group">
+                                            <label for="phoneNo">Contact No: <span style="color: red">*</span></label>
+                                            <input type="text" name="phoneNo" class="form-control" id="phoneNo" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                        <label for="vacancyFrom">Vacancy From: <span style="color: red">*</span></label>
+                                        <input type="vacancyFrom" name="vacancyFrom" class="form-control" id="vacancyFrom" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="advRent">Advance Rent: <span style="color: red">*</span></label>
+                                        <input type="advRent" name="advRent" class="form-control" id="advRent" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="gasBill">Gas Bill: <span style="color: red">*</span></label>
+                                        <select name="gasBill" class="form-control" id="gasBill" required>
+                                            <option value="">Select Yes/No </option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option> 
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="electricityBill">Electricity Bill: <span style="color: red">*</span></label>
+                                        <select name="electricityBill" class="form-control" id="electricityBill" required>
+                                            <option value="">Select Yes/No </option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option> 
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="security">Security: <span style="color: red">*</span></label>
+                                        <select name="security" class="form-control" id="security" required>
+                                            <option value="">Select Yes/No </option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option> 
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cctvCamera">CCTV Camera: <span style="color: red">*</span></label>
+                                        <select name="cctvCamera" class="form-control" id="cctvCamera" required>
+                                            <option value="">Select Yes/No </option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option> 
+                                        </select>
+                                    </div>
+                                    
+                                    
+                                   
+                                    <div class="form-group">
+                                        <label for="lift">Lift: <span style="color: red">*</span></label>
+                                        <select name="lift" class="form-control" id="lift" required>
+                                            <option value="">Select Yes/No </option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option> 
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="generator">Generator: <span style="color: red">*</span></label>
+                                        <select name="generator" class="form-control" id="generator" required>
+                                            <option value="">Select Yes/No </option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option> 
+                                        </select>
+                                    </div>
+
+                                    <div class="container">
+                                        <br />
+                                          <div class="row">
+                                              <div class='col-sm-3'>
+                                                  <div class="form-group">
+                                                    <div class="input-group date" data-provide="datepicker">
+                                                        <input type="text" class="form-control">
+                                                        <div class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-th"></span>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                <div class="col-md-12">
+                                    <button type="submit" name="crimeSubmit" class="btn btn-info btn-block">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/locales/bootstrap-datepicker.en-GB.min.js" charset="UTF-8"></script>
+
+    
+<script>
+$( document ).ready(function() {
+  $('#datepicker').datepicker();
+});
+</script>
+
+
+</body>
+</html>
+
+<?php include('partials/db_close.php'); ?>
